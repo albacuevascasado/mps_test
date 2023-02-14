@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:simpleType name="restrictedDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:maxExclusive value="100000"/>
+            <xs:minInclusive value="0"/>
+            <xs:fractionDigits value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="SR_PUW_Type">
+        <xs:sequence>
+            <xs:element name="SOURCE">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="IOCC_MCS"/>
+                        <xs:enumeration value="PLCC"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="GENERATION_EPOCH">
+                <xs:complexType>
+                    <xs:attribute name="DATE" type="xs:date" use="required"/>
+                    <xs:attribute name="TIME" type="xs:time" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PUW_DETAILS">
+                <xs:complexType>
+                    <xs:attribute name="isContingency" type="xs:boolean" use="required"/>
+                    <xs:attribute name="isMemoryErased" type="xs:boolean" use="required"/>
+                    <xs:attribute name="isActivity1ToBeStopped" type="xs:boolean" use="required"/>
+                    <xs:attribute name="isActivity2ToBeStopped" type="xs:boolean" use="required"/>
+                    <xs:attribute name="isActivityNToBeStopped" type="xs:boolean" use="required"/>
+                    <xs:attribute name="instantaneousDeltaEnergy" type="restrictedDecimal"/>
+                    <xs:attribute name="DeltaTime" type="restrictedDecimal"/>
+                    <xs:attribute name="IDENTIFIER" type="xs:integer" use="required"/>
+                    <xs:attribute name="TYPE" type="xs:NMTOKEN" use="required"/>
+                    <xs:attribute name="START" type="xs:dateTime" use="required"/>
+                    <xs:attribute name="STOP" type="xs:dateTime" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="PUW" type="SR_PUW_Type"/>
+</xs:schema>

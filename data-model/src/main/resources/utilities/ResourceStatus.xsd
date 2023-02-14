@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+    <xs:element name="Status" type="StatusType"/>
+    <xs:complexType name="StatusType">
+        <xs:sequence>
+            <xs:element name="Header" type="SRTM:HeaderType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Common Header tag</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element ref="SRTM:mission"/>
+            <xs:element name="ResourceList" type="ResourceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Information concerning with detailed status of the logical resources
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ResourceType">
+        <xs:sequence>
+            <xs:element name="resourceLocation">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="30"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ResourceStatus" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="resourceName">
+                            <xs:annotation>
+                                <xs:documentation>Unique identifier of the logical resource. The top-level identifiers unambiguously identify the Element/subsystem</xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:minLength value="1"/>
+                                    <xs:maxLength value="30"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:choice>
+                            <xs:sequence>
+                                <xs:element name="time" type="xs:dateTime">
+                                    <xs:annotation>
+                                        <xs:documentation>Epoch the status is referred to</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="resourceValue" type="xs:float"/>
+                            </xs:sequence>
+                            <xs:sequence>
+                                <xs:element name="TimeWindow" type="SRTM:TimeWindowType"/>
+                                <xs:element name="operationalStatus">
+                                    <xs:annotation>
+                                        <xs:documentation>Possible Status:
+                                            - OnLine: Resource Available (on-line)
+                                            - Maintenance: Resource Unavailable for Maintenance (such status is set by operator)
+                                            - Fault: Resource Unavailable (critical fault status)</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="OnLine"/>
+                                            <xs:enumeration value="Maintenance"/>
+                                            <xs:enumeration value="Fault"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:choice>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

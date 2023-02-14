@@ -1,0 +1,63 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="TCP_Data_Block">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TCP_Header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="TCP_Name"/>
+                            <xs:element type="xs:byte" name="TCP_Version"/>
+                            <xs:element type="xs:string" name="TCP_Description"/>
+                            <xs:element type="xs:dateTime" name="TCP_Creation_Time"/>
+                            <xs:element type="xs:string" name="TCP_Originator"/>
+                            <xs:element type="xs:string" name="TCP_MDB_Version"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TCP_Body">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TCP_Command_List">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TCP_Command_Activity" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="TCP_Command_Name"/>
+                                                    <xs:element type="xs:string" name="TCP_Command_Execution_Time"/>
+                                                    <xs:element name="TCP_Parameter_List">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="TCP_Parameter" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="TCP_Parameter_Name"/>
+                                                                            <xs:element type="xs:string" name="TCP_Parameter_Value"/>
+                                                                            <xs:element type="xs:string" name="TCP_Parameter_Type"/>
+                                                                            <xs:element type="xs:string" name="TCP_Parameter_Value_Type"/>
+                                                                            <xs:element type="xs:string" name="TCP_Parameter_Unit"/>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute type="xs:byte" name="pos" use="optional"/>
+                                                                        <xs:attribute type="xs:byte" name="edit" use="optional"/>
+                                                                        <xs:attribute type="xs:byte" name="dyn" use="optional"/>
+                                                                        <xs:attribute type="xs:byte" name="grpSize" use="optional"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:byte" name="count" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="count"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

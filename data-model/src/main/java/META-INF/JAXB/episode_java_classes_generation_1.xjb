@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.0 
+Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
+Generato il: 2023.02.06 alle 05:25:32 PM CET 
+
+  -->
+  <jaxb:bindings scd="x-schema::">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="com.mps.data_model.From_XML_Messages"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="TCP_Data_Block">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.TCPDataBlock"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_Header_Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.SRHeaderType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_MP_Report_Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.SRMPReportType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_PUW_Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.SRPUWType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_MP_Report_Msg_Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.SRMPReportMsgType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_MP_Status_Enum">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.SRMPStatusEnum"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SR_MP_Boolean_Enum">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.SRMPBooleanEnum"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings scd="x-schema::tns" xmlns:tns="urn:ccsds:schema:ndmxml">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="com.mps.data_model.From_XML_Messages"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:oemType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:opmCovarianceMatrixAbstractType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OpmCovarianceMatrixAbstractType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemCovarianceMatrixAbstractType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemCovarianceMatrixAbstractType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemCovarianceMatrixType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemCovarianceMatrixType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:opmCovarianceMatrixType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OpmCovarianceMatrixType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionCovarianceType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.PositionCovarianceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:velocityCovarianceType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.VelocityCovarianceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionVelocityCovarianceType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.PositionVelocityCovarianceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:deltamassType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.DeltamassType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:gmType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.GmType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:inclinationType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.InclinationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ndmHeader">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.NdmHeader"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:spacecraftParametersType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.SpacecraftParametersType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:stateVectorType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.StateVectorType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:stateVectorAccType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.StateVectorAccType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:quaternionType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.QuaternionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:quaternionRateType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.QuaternionRateType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:quaternionDotType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.QuaternionDotType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationAngleType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationAngleType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationAngleComponentTypeold">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationAngleComponentTypeold"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationAngleComponentType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationAngleComponentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationRateType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationRateType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationRateComponentTypeOLD">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationRateComponentTypeOLD"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotationRateComponentType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RotationRateComponentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:odParametersType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OdParametersType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:dayIntervalType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.DayIntervalType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:lengthType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.LengthType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:userDefinedType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.UserDefinedType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:userDefinedParameterType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.UserDefinedParameterType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ms2Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.Ms2Type"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.Km2Type"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2sType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.Km2SType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2s2Type">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.Km2S2Type"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:accType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AccType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleRateType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AngleRateType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AngleType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:areaType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AreaType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:distanceType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.DistanceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.PositionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:durationType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.DurationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:frequencyType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.FrequencyType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:massType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.MassType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:velocityType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.VelocityType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:percentageType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.PercentageType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:atmosphericReentryParametersType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AtmosphericReentryParametersType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:groundImpactParametersType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.GroundImpactParametersType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rdmSpacecraftParametersType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RdmSpacecraftParametersType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rdmPositionType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RdmPositionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rdmVelocityType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.RdmVelocityType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:latType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.LatType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ballisticCoeffType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.BallisticCoeffType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:altType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.AltType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:lonType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.LonType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:momentType">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.MomentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemBody">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemBody"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemSegment">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemSegment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemMetadata">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemMetadata"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:oemData">
+      <jaxb:class ref="com.mps.data_model.From_XML_Messages.OemData"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionCovarianceUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.PositionCovarianceUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:velocityCovarianceUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.VelocityCovarianceUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionVelocityCovarianceUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.PositionVelocityCovarianceUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:rotDirectionType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.RotDirectionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleKeywordType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AngleKeywordType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleRateKeywordType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AngleRateKeywordType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:dayIntervalUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.DayIntervalUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:lengthUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.LengthUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ms2Units">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.Ms2Units"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2Units">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.Km2Units"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2sUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.Km2SUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:km2s2Units">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.Km2S2Units"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:accUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AccUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleRateUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AngleRateUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:angleUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AngleUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:areaUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.AreaUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:positionUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.PositionUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:frequencyUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.FrequencyUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:massUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.MassUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:velocityUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.VelocityUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:timeUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.TimeUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ballisticCoeffUnitsType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.BallisticCoeffUnitsType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:latLonUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.LatLonUnits"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:disintegrationType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.DisintegrationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:impactUncertaintyType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.ImpactUncertaintyType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:reentryUncertaintyMethodType">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.ReentryUncertaintyMethodType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:momentUnits">
+      <jaxb:typesafeEnumClass ref="com.mps.data_model.From_XML_Messages.MomentUnits"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+</jaxb:bindings>
+

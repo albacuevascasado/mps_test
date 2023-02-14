@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:simpleType name="SR_MP_Status_Enum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="UNKNOWN"/>
+            <xs:enumeration value="UPLINKED"/>
+            <xs:enumeration value="EXECUTED"/>
+            <xs:enumeration value="DELETED"/>
+            <xs:enumeration value="FAILED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SR_MP_Boolean_Enum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NO"/>
+            <xs:enumeration value="YES"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="SR_MP_Report_Type">
+        <xs:sequence>
+            <xs:element name="SSF_FILE">
+                <xs:complexType>
+                    <xs:attribute name="NAME" type="xs:string" use="required"/>
+                    <xs:attribute name="VALID" type="SR_MP_Boolean_Enum" use="required"/>
+                    <xs:attribute name="NUMCMD" type="xs:nonNegativeInteger" use="required"/>
+                    <xs:attribute name="REPCOUNT" type="xs:positiveInteger" use="required"/>
+                    <xs:attribute name="LASTREP" type="SR_MP_Boolean_Enum" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CMD_ENTRY" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="NAME" type="xs:string" use="required"/>
+                    <xs:attribute name="CMDPOS" type="xs:positiveInteger" use="required"/>
+                    <xs:attribute name="EXEC_TIME" type="xs:integer" use="required"/>
+                    <xs:attribute name="PARENT" type="xs:string" use="required"/>
+                    <xs:attribute name="STATUS" type="SR_MP_Status_Enum" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SR_Header_Type">
+        <xs:sequence>
+            <xs:element name="SOURCE" type="xs:string">
+            </xs:element>
+            <xs:element name="GENERATION_EPOCH">
+                <xs:complexType>
+                    <xs:attribute name="DATE" type="xs:date" use="required"/>
+                    <xs:attribute name="TIME" type="xs:time" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="START_EPOCH">
+                <xs:complexType>
+                    <xs:attribute name="DATE" type="xs:date" use="required"/>
+                    <xs:attribute name="TIME" type="xs:time" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="VALIDITY">
+                <xs:complexType>
+                    <xs:attribute name="HOURS" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SR_MP_Report_Msg_Type">
+        <xs:sequence>
+            <xs:element name="HEADER" type="SR_Header_Type"/>
+            <xs:element name="REPORT" type="SR_MP_Report_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="MP_REPORT" type="SR_MP_Report_Msg_Type"/>
+</xs:schema>
