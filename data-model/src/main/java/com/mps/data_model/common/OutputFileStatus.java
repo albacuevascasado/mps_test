@@ -1,7 +1,7 @@
 package com.mps.data_model.common;
 
 public enum OutputFileStatus {
-    PROCESSING,
-    SENDING,
+    TO_PROCESS,
+    TO_SEND,
     ARCHIVED
 }

@@ -1,18 +1,19 @@
 package com.mps.data_model.payload_data_manager;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class PCFFilesKey implements Serializable {
 
-    private Long pcfFileId;
+    private BigInteger pcfFileId;
 
     private String pcfFileName;
 
     public PCFFilesKey() {
     }
 
-    public PCFFilesKey(Long pcfFileId, String pcfFileName) {
+    public PCFFilesKey(BigInteger pcfFileId, String pcfFileName) {
         this.pcfFileId = pcfFileId;
         this.pcfFileName = pcfFileName;
     }

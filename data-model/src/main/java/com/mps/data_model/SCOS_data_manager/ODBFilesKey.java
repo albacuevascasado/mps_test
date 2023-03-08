@@ -1,18 +1,19 @@
 package com.mps.data_model.SCOS_data_manager;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class ODBFilesKey implements Serializable {
 
-    private Long odbFileId;
+    private BigInteger odbFileId;
 
     private String odbFileName;
 
     public ODBFilesKey() {
     }
 
-    public ODBFilesKey(Long odbFileId, String odbFileName) {
+    public ODBFilesKey(BigInteger odbFileId, String odbFileName) {
         this.odbFileId = odbFileId;
         this.odbFileName = odbFileName;
     }

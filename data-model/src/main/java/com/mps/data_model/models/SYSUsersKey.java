@@ -1,18 +1,19 @@
 package com.mps.data_model.models;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class SYSUsersKey implements Serializable {
 
-    private Long userId;
+    private BigInteger userId;
 
     private String userName;
 
     public SYSUsersKey() {
     }
 
-    public SYSUsersKey(Long userId, String userName) {
+    public SYSUsersKey(BigInteger userId, String userName) {
         this.userId = userId;
         this.userName = userName;
     }

@@ -1,18 +1,19 @@
 package com.mps.data_model.flight_data_manager;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class SOEFilesKey implements Serializable {
 
-    private Long soeFileId;
+    private BigInteger soeFileId;
 
     private String soeFileName;
 
     public SOEFilesKey() {
     }
 
-    public SOEFilesKey(Long soeFileId, String soeFileName) {
+    public SOEFilesKey(BigInteger soeFileId, String soeFileName) {
         this.soeFileId = soeFileId;
         this.soeFileName = soeFileName;
     }

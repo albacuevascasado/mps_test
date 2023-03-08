@@ -40,12 +40,12 @@ public class ProductController {
 //        return ResponseEntity.status(201).body(this.productRepository.save(product));
 //    }
     public void createProducts(@RequestBody List<Product> products) {
-        this.productService.createProducts(products);
+         this.productService.createProducts(products);
     }
 
     @PostMapping ("/add")
-    public void createProduct(@RequestBody Product product) {
-        this.productService.createProduct(product);
+    public String createProduct(@RequestBody Product product) {
+        return this.productService.createProduct(product);
     }
 
     @PutMapping ("/{id}")
@@ -64,6 +64,8 @@ public class ProductController {
     public String deleteProduct(@PathVariable Long id) {
         return this.productService.deleteProduct(id);
     }
+
+
 
 }
 

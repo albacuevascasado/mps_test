@@ -1,18 +1,19 @@
 package com.mps.data_model.mission_planner;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class MPLFilesKey implements Serializable {
 
-    private Long mplFileId;
+    private BigInteger mplFileId;
 
     private String mplFileName;
 
     public MPLFilesKey() {
     }
 
-    public MPLFilesKey(Long mplFileId, String mplFileName) {
+    public MPLFilesKey(BigInteger mplFileId, String mplFileName) {
         this.mplFileId = mplFileId;
         this.mplFileName = mplFileName;
     }

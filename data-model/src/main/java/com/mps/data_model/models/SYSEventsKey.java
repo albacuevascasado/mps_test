@@ -1,4 +1,4 @@
-package com.mps.data_model.common;
+package com.mps.data_model.models;
 
 import java.io.Serializable;
 import java.util.Objects;

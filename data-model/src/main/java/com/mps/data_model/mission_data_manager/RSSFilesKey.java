@@ -1,15 +1,16 @@
 package com.mps.data_model.mission_data_manager;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class RSSFilesKey implements Serializable {
 
-    private Long rssFileId;
+    private BigInteger rssFileId;
 
     private String rssFileName;
 
-    public RSSFilesKey(Long rssFileId, String rssFileName) {
+    public RSSFilesKey(BigInteger rssFileId, String rssFileName) {
         this.rssFileId = rssFileId;
         this.rssFileName = rssFileName;
     }

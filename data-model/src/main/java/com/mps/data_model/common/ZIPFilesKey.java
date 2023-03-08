@@ -1,18 +1,19 @@
 package com.mps.data_model.common;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class ZIPFilesKey implements Serializable {
 
-    private Long zipFileId;
+    private BigInteger zipFileId;
 
     private String zipFileName;
 
     public ZIPFilesKey() {
     }
 
-    public ZIPFilesKey(Long zipFileId, String zipFileName) {
+    public ZIPFilesKey(BigInteger zipFileId, String zipFileName) {
         this.zipFileId = zipFileId;
         this.zipFileName = zipFileName;
     }
@@ -21,8 +22,8 @@ public class ZIPFilesKey implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ZIPFilesKey iporFilesKey = (ZIPFilesKey) o;
-        return zipFileId.equals(iporFilesKey.zipFileId) && zipFileName.equals(iporFilesKey.zipFileName);
+        ZIPFilesKey zipFilesKey = (ZIPFilesKey) o;
+        return zipFileId.equals(zipFilesKey.zipFileId) && zipFileName.equals(zipFilesKey.zipFileName);
     }
 
     @Override

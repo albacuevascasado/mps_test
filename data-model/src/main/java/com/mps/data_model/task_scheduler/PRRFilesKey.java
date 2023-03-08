@@ -1,18 +1,19 @@
 package com.mps.data_model.task_scheduler;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class PRRFilesKey implements Serializable {
 
-    private Long prrFileId;
+    private BigInteger prrFileId;
 
     private String prrFileName;
 
     public PRRFilesKey() {
     }
 
-    public PRRFilesKey(Long prrFileId, String prrFileName) {
+    public PRRFilesKey(BigInteger prrFileId, String prrFileName) {
         this.prrFileId = prrFileId;
         this.prrFileName = prrFileName;
     }

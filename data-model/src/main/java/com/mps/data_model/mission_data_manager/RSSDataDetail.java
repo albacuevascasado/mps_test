@@ -9,27 +9,24 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "\"T_RSS_DATA_DETAIL\"", schema = "mps_schema")
 @IdClass(RSSDataDetailKey.class)
+@Getter @Setter
 public class RSSDataDetail {
 
     @Id
     @Column(name = "\"RESOURCE_LOCATION\"", nullable = false)
-    @Getter @Setter
     private String resourceLocation;
 
     @Id
     @Column(name = "\"RESOURCE_NAME\"", nullable = false)
-    @Getter @Setter
     private String resourceName;
 
     @Column(name = "\"RESOURCE_STATUS\"", nullable = false)
-    @Getter @Setter
     private String resourceStatus;
 
     @Column(name = "\"DATE_STATUS\"", nullable = false)
-    @Getter @Setter
     private LocalDateTime dateStatus;
 
-    @ManyToOne
+    @ManyToOne (cascade = { CascadeType.PERSIST , CascadeType.REMOVE } , optional = false)
     @JoinColumns(
             foreignKey = @ForeignKey(name = "\"T_RSS_DATA_DETAIL_FILES_fkey\""),
             value = {

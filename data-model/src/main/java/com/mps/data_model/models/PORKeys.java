@@ -4,27 +4,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
-@Embeddable
+
 public class PORKeys implements Serializable {
 
-    @Column(name = "\"POR_FILE_ID\"", nullable = false)
-    @Getter @Setter
-    private Long porFileId;
+    private BigInteger porFileId;
 
-
-    @Column(name = "\"POR_FILE_NAME\"", nullable = false)
-    @Getter @Setter
     private String porFileName;
 
     public PORKeys() {
     }
 
-    public PORKeys(Long porFileId, String porFileName) {
+    public PORKeys(BigInteger porFileId, String porFileName) {
         this.porFileId = porFileId;
         this.porFileName = porFileName;
     }

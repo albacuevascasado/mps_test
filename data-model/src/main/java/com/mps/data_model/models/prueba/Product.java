@@ -6,32 +6,43 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "product",
-        schema = "public",
-        uniqueConstraints = {@UniqueConstraint(name = "product_unique_email", columnNames = "email")})
+@Table (name = "product", schema = "public")
+@Getter @Setter
 public class Product {
 
     @Id
-//    @SequenceGenerator(
-//            name = "product_sequence",
-//            sequenceName = "product_sequence",
-//            allocationSize = 1
-//    )
-    @GeneratedValue (
-            strategy = GenerationType.AUTO
-            //generator = "product_sequence"
+    @SequenceGenerator(
+            name = "product_sequence",
+            sequenceName = "product_sequence",
+            schema = "public",
+            initialValue = 1,
+            allocationSize =1
     )
-    @Getter @Setter
+    @GeneratedValue (
+            strategy = GenerationType.SEQUENCE ,
+            generator = "product_sequence"
+    )
     private Long id;
 
     @Column(name = "nombre_producto", nullable = false)
-    @Getter @Setter
     private String name;
 
-    @Getter @Setter
     private String description;
 
-    @Getter @Setter
-    private  String email;
+    @Column(nullable = false)
+    private Integer quantity;
+
+
+    /*
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Client client;
+
+    @OneToOne
+    @MapsId(value = "addressId")
+    @JoinColumn(  foreignKey = @ForeignKey(name = "address_product"),
+                    name="addressId", referencedColumnName = "id" , nullable = false)
+    private Address address;
+
+     */
 
 }

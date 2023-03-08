@@ -9,32 +9,35 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "\"T_SOE_DATA\"", schema = "mps_schema")
+@IdClass(SOEDataKey.class)
+@Getter @Setter
 public class SOEData {
 
     @Id
-    @Column(name = "\"SOE_EVENT_START\"", nullable = false)
-    @Getter @Setter
-    private LocalDateTime soeEventStart;
+    @Column(name = "\"SOE_EVENT_ID\"", nullable = false)
+    private BigInteger soeEventId;
 
-    @Column(name = "\"SOE_EVENT_END\"")
-    @Getter @Setter
+    @Id
+    @Column(name = "\"SOE_EVENT_NAME\"", nullable = false)
+    private String soeEventName;
+
+    @Id
+    @Column(name = "\"SOE_EVENT_TYPE\"", nullable = false)
+    private LocalDateTime soeEventType;
+
+    @Column(name = "\"SOE_EVENT_TIMESTAMP\"", nullable = false)
     private LocalDateTime soeEventEnd;
 
-    @Column(name = "\"SOE_EVENT_ELAPSED\"")
-    @Getter @Setter
-    private BigInteger soeEventElapsed;
+    @Column(name = "\"SOE_EVENT_PARAMETER\"")
+    private Double soeEventParameter;
 
-    @Column(name = "\"SOE_EVENT_DESCRIPTION\"")
-    @Getter @Setter
-    private String soeEventDescription;
 
-    @ManyToOne
+    @ManyToOne(cascade = { CascadeType.PERSIST , CascadeType.REMOVE } , optional = false )
     @JoinColumns(
             foreignKey = @ForeignKey(name = "\"T_SOE_DATA_FILES_fkey\""),
             value = {
                     @JoinColumn(name = "\"SOE_FILE_ID\"", referencedColumnName = "\"SOE_FILE_ID\"", nullable = false),
                     @JoinColumn(name = "\"SOE_FILE_NAME\"", referencedColumnName = "\"SOE_FILE_NAME\"", nullable = false)
             })
-    @Getter @Setter
     private SOEFiles soeFiles;
 }

@@ -1,18 +1,19 @@
 package com.mps.data_model.payload_data_manager;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class PRLDataKeys implements Serializable {
 
-    private Long prlId;
+    private BigInteger prlId;
 
     private String prlName;
 
     public PRLDataKeys() {
     }
 
-    public PRLDataKeys(Long prlId, String prlName) {
+    public PRLDataKeys(BigInteger prlId, String prlName) {
         this.prlId = prlId;
         this.prlName = prlName;
     }
