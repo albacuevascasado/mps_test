@@ -28,8 +28,8 @@ public class PORKeys implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PORKeys porDataHeadKeys = (PORKeys) o;
-        return porFileId.equals(porDataHeadKeys.porFileId) && porFileName.equals(porDataHeadKeys.porFileName);
+        PORKeys porKeys = (PORKeys) o;
+        return porFileId.equals(porKeys.porFileId) && porFileName.equals(porKeys.porFileName);
     }
 
     @Override

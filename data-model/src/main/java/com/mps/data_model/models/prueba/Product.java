@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigInteger;
+import java.util.List;
 
 @Entity
 @Table (name = "product", schema = "public")
@@ -31,7 +33,6 @@ public class Product {
 
     @Column(nullable = false)
     private Integer quantity;
-
 
     /*
     @ManyToOne(cascade = CascadeType.ALL)

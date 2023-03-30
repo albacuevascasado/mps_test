@@ -2,6 +2,7 @@ package com.mps.persistency_layer.controllers;
 
 import com.mps.data_model.models.prueba.Client;
 //import com.mps.data_model.models.prueba.DetailsClient;
+import com.mps.persistency_layer.repositories.prueba.ClientRepository;
 import com.mps.persistency_layer.services.ClientService;
 //import com.mps.persistency_layer.services.DetailsClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,13 @@ public class ClientController {
 
     @Autowired
     private ClientService clientService;
+    @Autowired
+    private ClientRepository clientRepository;
     //@Autowired
     //private DetailsClientService detailsClientService;
 
     @PostMapping("/add")
-    public  void createClient(@RequestBody Client client) {
-        this.clientService.createClient(client);
-    }
+    public  void createClient(@RequestBody Client client) {  this.clientService.createClient(client); }
 
     @GetMapping
     public List<Client> getAllClients() { return this.clientService.getClients(); }

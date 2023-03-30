@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 
 @Entity
 @Table (name = "address" , schema = "public")
@@ -21,9 +22,13 @@ public class Address {
 
     private Long zipCode;
 
+    /*
     @OneToOne(mappedBy = "address", cascade = CascadeType.PERSIST)
     //JoinColumn(name = "client_id" , referencedColumnName = "id")
     @JsonBackReference
     private Client client;
+
+     */
+
 
 }

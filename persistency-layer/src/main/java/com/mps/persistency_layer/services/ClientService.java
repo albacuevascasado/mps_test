@@ -5,7 +5,7 @@ import com.mps.persistency_layer.repositories.prueba.AddressRepository;
 import com.mps.persistency_layer.repositories.prueba.ClientRepository;
 //import com.mps.persistency_layer.repositories.prueba.ProductRepository;
 //import com.mps.persistency_layer.repositories.prueba.DetailsClientRepository;
-import com.mps.persistency_layer.repositories.prueba.OrderRepository;
+import com.mps.persistency_layer.repositories.prueba.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class ClientService {
     @Autowired
     AddressRepository addressRepository;
     @Autowired
-    OrderRepository orderRepository;
+    OrdersRepository ordersRepository;
 
     public void createClient(Client client) {
         Optional<Client> productByEmail = this.clientRepository.findClientByEmail(client.getEmail());
@@ -57,7 +57,7 @@ public class ClientService {
         }
 
  */
-        this.clientRepository.save(client);
+        //this.clientRepository.save(client);
 
         //return "New Client " + client.getFirstName() + "Product " + client.getProduct().getId();
 

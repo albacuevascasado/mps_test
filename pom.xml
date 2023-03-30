@@ -19,6 +19,7 @@
         <module>data-model</module>
         <module>persistency-layer</module>
         <module>mission-plan-supervisor</module>
+        <module>thread_filewatcher</module>
     </modules>
 
     <properties>

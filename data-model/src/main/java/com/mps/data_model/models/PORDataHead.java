@@ -2,17 +2,20 @@ package com.mps.data_model.models;
 
 import com.mps.data_model.common.PORStatus;
 import com.mps.data_model.common.PORType;
+import io.hypersistence.utils.hibernate.type.interval.PostgreSQLIntervalType;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.math.BigInteger;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "\"T_POR_DATA_HEAD\"", schema = "mps_schema")
 @IdClass(PORKeys.class)
-@Getter @Setter
+@TypeDef(typeClass = PostgreSQLIntervalType.class, defaultForType = Duration.class)
 public class PORDataHead{
 
     @Id
@@ -60,7 +63,7 @@ public class PORDataHead{
     private BigInteger relStartBaseCount;
 
     @Column(name = "\"REL_START_DELTA\"")
-    private Integer relStartDelta;
+    private Duration relStartDelta;
 
     @Column(name = "\"REL_START_PROP_FACTOR\"")
     private BigInteger relStartPropFactor;
@@ -72,7 +75,7 @@ public class PORDataHead{
     private BigInteger relEndBaseCount;
 
     @Column(name = "\"REL_END_DELTA\"")
-    private Integer relEndDelta;
+    private Duration relEndDelta;
 
     @Column(name = "\"REL_END_PROP_FACTOR\"")
     private BigInteger relEndPropFactor;

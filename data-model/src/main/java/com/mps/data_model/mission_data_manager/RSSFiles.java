@@ -54,6 +54,7 @@ public class RSSFiles {
     /*
     DOES NOT CONNECT THE INFO IN THE TABLES IF YOU SAVE FROM RSSFILES (NOT OWING SIDE)
      */
+    /*
     @OneToOne(mappedBy = "rssFiles", cascade = CascadeType.PERSIST)
     @JsonBackReference
     private RSSDataHead rssDataHead;
@@ -61,5 +62,6 @@ public class RSSFiles {
     @OneToMany(mappedBy = "rssFiles", cascade = CascadeType.PERSIST)
     @JsonBackReference
     private List<RSSDataDetail> rssDataDetail;
+     */
 
 }
